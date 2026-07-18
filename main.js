@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express');
-const app = express();
+const app = require('./src/app');
 
 const sequelize = require('./src/config/database');
 const PORT = process.env.PORT || 3000
@@ -13,6 +13,9 @@ const startServer = async () => {
         console.log("mysql connected");
 
         // seeder database
+        if (process.env.SEED_DB === 'true') {
+            
+        }
 
         app.listen(PORT, () => {
             console.log(`app running on http://localhost:${PORT}`);

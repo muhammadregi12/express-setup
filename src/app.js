@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/public", express.static(path.join(__dirname, "..", "public")));
 
 // routes
-app.use("/api", routes);
+// app.use("/api", routes);
 
 app.get('/', (req, res) => {
     res.send('Hallo Developer')
